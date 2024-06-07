@@ -1,0 +1,98 @@
+// src/styles/StudentPage.scss
+$background-color: #f9f9f9;
+$theme-color: #fae457;
+$text-color: #333;
+$secondary-text-color: #666;
+$header-text-color: #019cdb;
+$card-background: #fff;
+$card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-color;
+}
+
+.student-page {
+  padding: 20px;
+  background-color: $background-color;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+  .student-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    .btn-name {
+      display: flex;
+      width: 100%;
+    }
+    h1 {
+      font-size: 2em;
+      color: $header-text-color;
+      flex-grow: 1;
+    }
+
+    .student-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-top: 10px;
+    }
+  }
+
+  .assign-button {
+    background-color: $theme-color;
+    border: none;
+    padding: 10px 20px;
+    color: $text-color;
+    font-size: 1.2em;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($theme-color, 10%);
+    }
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  .assigned-book-section {
+    text-align: left;
+    margin-top: 20px;
+
+    h2 {
+      font-size: 1.5em;
+      color: $text-color;
+      margin-bottom: 10px;
+    }
+
+    .book-card {
+      background: $card-background;
+      border-radius: 5px;
+      box-shadow: $card-shadow;
+      padding: 10px;
+      text-align: center;
+      font-size: 1em;
+      color: $secondary-text-color;
+    }
+
+    .no-book {
+      font-size: 1em;
+      color: $secondary-text-color;
+    }
+  }
+}

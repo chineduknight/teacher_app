@@ -1,0 +1,153 @@
+// src/styles/ClassroomPage.scss
+$classroom-background-color: #f9f9f9;
+$theme-color: #fae457;
+$text-color: #333;
+$secondary-text-color: #666;
+$header-text-color: #019cdb;
+$card-background: #fff;
+$card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+.classroom {
+  padding: 20px;
+  background-color: $classroom-background-color;
+
+  .classroom-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    h1 {
+      flex-grow: 1;
+      font-size: 2.5em;
+      color: $header-text-color;
+      text-align: center;
+    }
+
+    .back-button {
+      background: none;
+      border: none;
+      color: $header-text-color;
+      font-size: 1.2em;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        color: darken($header-text-color, 10%);
+      }
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .classroom-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .students-section,
+    .assignments-section {
+      width: 100%;
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: 1.5em;
+        color: $text-color;
+        margin-bottom: 10px;
+      }
+
+      .students-list,
+      .assignments-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .student-card,
+        .assignment-card {
+          background: $card-background;
+          border-radius: 10px;
+          box-shadow: $card-shadow;
+          padding: 15px;
+          transition: transform 0.3s, box-shadow 0.3s;
+          cursor: pointer;
+          text-align: center;
+
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          }
+
+          a {
+            text-decoration: none;
+            color: $text-color;
+            font-size: 1.2em;
+          }
+
+          .assignment-header {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 10px;
+
+            h3 {
+              font-size: 1.2em;
+              color: $text-color;
+            }
+
+            p {
+              font-size: 0.9em;
+              color: $secondary-text-color;
+            }
+          }
+
+          .assignment-resources {
+            text-align: left;
+
+            h4 {
+              font-size: 1em;
+              color: $text-color;
+              margin-bottom: 5px;
+            }
+
+            ul {
+              list-style: none;
+              padding: 0;
+
+              li {
+                font-size: 0.9em;
+                color: $secondary-text-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .assign-button {
+      background-color: $theme-color;
+      border: none;
+      padding: 10px 20px;
+      color: $text-color;
+      font-size: 1.2em;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken($theme-color, 10%);
+      }
+
+      svg {
+        margin-right: 10px;
+      }
+    }
+  }
+}

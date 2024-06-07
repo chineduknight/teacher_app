@@ -1,0 +1,84 @@
+// src/styles/main.scss
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+// src/styles/global.scss
+$theme-color: #fddb00;
+$text-color: #333;
+$secondary-text-color: #666;
+$header-text-color: #019cdb;
+
+// Basic CSS Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: $text-color;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+button {
+  background-color: $theme-color;
+  border: none;
+  padding: 10px 20px;
+  color: $text-color;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken($theme-color, 10%);
+  }
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $text-color;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: $header-text-color;
+  font-size: 1.2em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: darken($header-text-color, 10%);
+  }
+
+  svg {
+    margin-right: 5px;
+  }
+}

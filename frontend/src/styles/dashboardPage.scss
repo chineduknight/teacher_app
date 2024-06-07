@@ -1,0 +1,63 @@
+// src/styles/DashboardPage.scss
+$background-color: #f9f9f9;
+$theme-color: #fae457;
+$text-color: #333;
+$secondary-text-color: #666;
+$header-text-color: #019cdb; // Added this variable for the header text color
+
+.dashboard {
+  padding: 20px;
+  background-color: $background-color;
+  text-align: center;
+
+  &-header {
+    margin-bottom: 30px;
+
+    h1 {
+      font-size: 2.5em;
+      color: $header-text-color; // Use the new header text color
+    }
+
+    p {
+      font-size: 1.2em;
+      color: $secondary-text-color;
+    }
+  }
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .dashboard-item {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .dashboard-icon {
+        font-size: 4em;
+        color: $theme-color;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        color: $text-color;
+        margin: 10px 0;
+      }
+
+      p {
+        font-size: 1em;
+        color: $secondary-text-color;
+      }
+    }
+  }
+}
